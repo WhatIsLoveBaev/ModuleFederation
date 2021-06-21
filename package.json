@@ -1,0 +1,14 @@
+{
+  "name": "module-federation-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "serve": "wsrun --parallel serve",
+    "dev": "wsrun --parallel dev",
+    "format": "wsrun --parallel format"
+  },
+  "workspaces": [
+    "modules/*"
+  ]
+}
