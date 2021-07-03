@@ -25,7 +25,7 @@ module.exports = {
         ],
         'import/newline-after-import': ["error", { count: 2 }],
         'import/no-extraneous-dependencies': ["error", { devDependencies: true }],
-        'import/no-unresolved': ["error"],
+        'import/no-unresolved': 'off',
         'import/order': ["error", {
             groups: [
                 ['builtin', 'external'],
@@ -35,7 +35,9 @@ module.exports = {
             'newlines-between': 'always',
         }],
         'import/first': ["error", 'absolute-first'],
-        'jsx-quotes': ['warn', 'prefer-single'],
+        'jsx-quotes': ['error', 'prefer-single'],
+        "object-curly-spacing": ["error", "always"],
+        "@typescript-eslint/object-curly-spacing": ["error", "always"],
         'semi': ["error", "always"],
         'max-len': ["error", {
             code: 100,
@@ -45,7 +47,7 @@ module.exports = {
         'no-use-before-define': 'off',
         'no-process-env': ["error"],
         'object-curly-newline': ["error", {
-            multiline: true, minProperties: 2, consistent: true,
+            multiline: true, minProperties: 4, consistent: true,
         }],
         quotes: ['warn', 'single'],
 
@@ -63,7 +65,7 @@ module.exports = {
         'react/no-array-index-key': ['warn'],
         'react/no-direct-mutation-state': ['error'],
         "react/forbid-component-props": ["error"],
-        'react/jsx-boolean-value': ['warn'],
+        'react/jsx-boolean-value': ['error'],
     }
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { AppRoot } from './AppRoot';
+import { HostRoot } from './app';
 
 
 ReactDOM.render(
-    <AppRoot />,
+    <HostRoot />,
     document.querySelector('#root')
 );

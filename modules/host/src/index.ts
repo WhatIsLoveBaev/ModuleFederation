@@ -1,1 +1,1 @@
-import('./entryPoint');
+import('./bootstrap');
