@@ -20,13 +20,11 @@ module.exports = webpackMerge(webpackModuleConfig({ devServerPort: 3001 }),
                 exposes: {
                     './components': 'components',
                     './theme': 'theme',
+                    './utils': 'utils',
                 },
                 shared: [
                     "react",
                     "react-dom",
-                    { "@material-ui/styles": { singleton: true } },
-                    { "@material-ui/core": { singleton: true } },
-                    { "@material-ui/icons": { singleton: true } }
                 ]
             }),
         ]

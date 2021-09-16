@@ -7,7 +7,8 @@
     "build-prod": "cross-env NODE_ENV=production webpack --mode production",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development",
-    "serve": "serve dist -p 3000",
+    "serve": "serve dist -p 3000 -s",
+    "dev": "webpack serve",
     "lint": "eslint ./src --ext .ts,.tsx,.js",
     "lint:fix": "eslint ./src --ext .ts,.tsx,.js --fix"
   },
@@ -41,6 +42,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "react": "^17.0.2",

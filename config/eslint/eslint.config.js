@@ -59,13 +59,15 @@ module.exports = {
         }],
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/no-unused-vars': ['warn'],
-        '@typescript-eslint/ban-ts-ignore': 'off',
+        '@typescript-eslint/ban-ts-ignore': "off",
+        "@typescript-eslint/camelcase": "off",
 
         'react-hooks/rules-of-hooks': ['error'],
         'react/no-array-index-key': ['warn'],
         'react/no-direct-mutation-state': ['error'],
-        "react/forbid-component-props": ["error"],
         'react/jsx-boolean-value': ['error'],
+        "react/jsx-props-no-spreading": "off",
+
     }
 }
 

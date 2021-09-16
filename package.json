@@ -4,11 +4,16 @@
   "version": "1.0.0",
   "scripts": {
     "build": "yarn workspaces run build",
-    "serve": "wsrun --parallel serve",
+    "start": "wsrun --parallel start",
+    "serve": "yarn build && wsrun --parallel serve",
     "dev": "wsrun --parallel dev",
-    "format": "wsrun --parallel format"
+    "lint": "wsrun --parallel lint",
+    "lint:fix": "wsrun --parallel lint:fix"
   },
   "workspaces": [
     "modules/*"
-  ]
+  ],
+  "devDependencies": {
+    "wsrun": "^5.2.4"
+  }
 }

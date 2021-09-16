@@ -14,6 +14,10 @@ export const darkTheme = {
             paper: '#303030',
             default: '#4D4D4D',
         },
+        common: {
+            black: '#fefefe',
+            white: '#222222',
+        }
     },
     dividerColor: {
         default: 'rgba(255,255,255,0.3)',

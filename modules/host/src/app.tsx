@@ -1,17 +1,21 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import React, { Suspense } from 'react';
 import { renderRoutes } from 'react-router-config';
+import { RootLayout } from 'common/components';
+import { Box } from '@material-ui/core';
 
-import { RootLayout } from './components/RootLayout';
-import { Header } from './components/Header';
 import { routes } from './routes';
+import { LeftSideBar } from './components/LeftSideBar';
 
 
 export const HostRoot = () => {
     return (
-        <RootLayout>
-            <Header />
-            {renderRoutes(routes)}
-        </RootLayout>
+        <Suspense fallback='root loading...'>
+            <RootLayout>
+                <Box display='flex'>
+                    <LeftSideBar />
+                    {renderRoutes(routes)}
+                </Box>
+            </RootLayout>
+        </Suspense>
     );
 };

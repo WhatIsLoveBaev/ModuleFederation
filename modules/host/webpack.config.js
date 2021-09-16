@@ -21,10 +21,7 @@ module.exports = webpackMerge(webpackModuleConfig({ devServerPort: 3000 }),
                 name: 'host',
                 filename: 'remoteEntry.js',
                 remotes: {
-                    "common": "common@http://localhost:3001/remoteEntry.js",
-                },
-                exposes: {
-                    './RootLayout': 'components/RootLayout',
+                    "@common": "common@http://localhost:3001/remoteEntry.js",
                 },
                 shared: [
                     "react",

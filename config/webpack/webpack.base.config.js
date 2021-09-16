@@ -6,16 +6,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // alias: {  для импортов
 // url-loader ???
 
-const isDev = process.env.NODE_ENV === 'development';
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+// const isDev = process.env.NODE_ENV === 'development';
+// const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 module.exports = {
     entry: "./src/index.ts",
     output: {
         path: path.resolve("dist"),
-        filename: filename('js'),
+        filename: '[name].js',
     },
     optimization: {
+        runtimeChunk: 'single',
         splitChunks: {
             cacheGroups: {
                 commons: {
@@ -98,6 +99,7 @@ module.exports = {
         ]
     },
     resolve: {
+        modules: ['src', 'node_modules'],
         extensions: [".tsx", ".ts", ".jsx", ".js"],
         alias: {
             '@host': path.resolve(__dirname, 'src/modules/host')
